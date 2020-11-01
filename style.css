@@ -1,0 +1,60 @@
+body{
+    background-color: black;
+}
+#app{
+    width: 50%;
+    margin: 70px auto 0px auto;
+    background-color: white;
+    border-radius: 5px;
+
+}
+table {
+    text-align: center;
+    margin: 0 auto;
+    border-spacing:0px;
+    border-collapse: collapse;
+}
+
+ tr,td {
+    width: 200px;
+    height: 150px;
+}
+
+td:nth-child(1){
+
+    border-bottom: 1px solid black;
+}
+
+td:nth-child(2){
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+}
+td:nth-child(3){
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+}
+tr:nth-child(3) td{
+   
+    border-bottom:0px;
+}
+
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+}
+
+.description{
+    width: 100%;
+    height: 35px; 
+    background-color:
+    black; color: chartreuse; 
+    text-align: center;
+}
+
+.red{
+    color: chartreuse !important;
+    background-color: black;
+    border: 1px white;
+}

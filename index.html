@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X-O-X</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+    
+    <div id="app">
+
+        
+        <table v-if="!gameOwer"> 
+            <tr v-for="(value, key) in tac">
+              <td  v-for="(value2, key2) in value" @click="to(key,key2), counter++" :class="renk(value2)"   >
+                <transition name="fade">
+                    <strong v-if="tac[key][key2]"> {{ tac[key][key2] }}</strong>
+                </transition>
+                </td>             
+            </tr>
+           </table>
+           <div class="description">
+            <span v-if="gameBraing"> Düşünüyorum..</span>
+         
+            <span v-if="gameOwer"> Oyun bitti Kazanan <strong v-text="winners"> </strong></span>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
