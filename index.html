@@ -7,12 +7,9 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 </head>
-<body>
-    
+<body>    
     <div id="app">
-
-        
-        <table v-if="!gameOwer"> 
+        <table v-if="!gameOver"> 
             <tr v-for="(value, key) in tac">
               <td  v-for="(value2, key2) in value" @click="to(key,key2), counter++" :class="renk(value2)"   >
                 <transition name="fade">
@@ -22,13 +19,10 @@
             </tr>
            </table>
            <div class="description">
-            <span v-if="gameBraing"> Düşünüyorum..</span>
-         
-            <span v-if="gameOwer"> Oyun bitti Kazanan <strong v-text="winners"> </strong></span>
-        </div>
+            <span v-if="gameBrain"> Düşünüyorum..</span>         
+            <span v-if="gameOver"> Oyun bitti Kazanan <strong v-text="winners"> </strong></span>
+           </div>
     </div>
-
     <script src="js/app.js"></script>
 </body>
-
 </html>
